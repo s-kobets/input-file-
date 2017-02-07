@@ -2,11 +2,17 @@
 <html>
 	<head>
 		<title></title>
+		<style type="text/css">
+			input[type="file"] {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<form>
-			<button>Загрузить данные</button>
-			<input type="file" name="file">
+			<button class="js-add-files" v-on:click="inputLoad">Загрузить данные</button>
+			<input id="fileInput" type="file" name="file" v-on:change="formData">
 		</form>
+		<div class="js-comments"></div>
 	</body>
 </html>

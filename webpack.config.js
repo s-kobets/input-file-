@@ -40,14 +40,18 @@ module.exports = {
 
     resolve: { //указывает где искать модули, например ./static_src/scripts/main.js
         modulesDirectories: ['node_modules'],
-        extensions: ['','.js']
+        extensions: ['','.js'],
+        alias: {
+            'vue$': 'vue/dist/vue.common.js'
+        }
     },
 
     resolveLoader: { //указывает где искать модули для loaders например babel
         modulesDirectories: ['node_modules'],
         moduleTemplates: ['*-loader', '*'],
-        extensions: ['','.js']
+        extensions: ['','.js']         
     },
+    
 
     module: { //устанавливаем нужные модули -- npm i имя
         loaders: [
